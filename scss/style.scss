@@ -16,6 +16,10 @@ a {
   color: white;
 }
 
+a:hover {
+  color: $text-secondary;
+}
+
 .container {
   width: 90%;
   margin: 0 auto;
@@ -33,6 +37,21 @@ a {
   font-size: 25px;
   font-weight: 300;
   letter-spacing: 0.02rem;
+  position: sticky;
+  top: 0;
+
+  .bg-div {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    .bg-img {
+      font-size: 40rem;
+      color: rgba(255, 255, 255, 0.05);
+    }
+  }
+  .header-top {
+    font-size: 24px;
+  }
   p {
     padding: 20px;
   }
@@ -47,17 +66,41 @@ a {
     font-size: 17px;
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 5px 20px;
     .navlogo {
       display: flex;
     }
 
     ul {
       display: flex;
-
       list-style: none;
+
+      .search-input {
+        height: 30px;
+        background-color: transparent;
+        color: #ffffff;
+        font-size: 18px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+        border: 0;
+        border-radius: 5px;
+        outline: none;
+        padding-left: 30px;
+      }
+
+      .search-input:focus {
+        background-color: #373940;
+      }
       li {
         padding: 0 15px;
+      }
+      .languages {
+        a {
+          path:hover {
+            fill: $text-secondary;
+          }
+        }
+        color: $text-secondary;
       }
     }
 
@@ -70,36 +113,65 @@ a {
 .feature {
   background-color: #282c34;
   color: white;
+  padding: 55px 0;
   h1 {
     padding-top: 60px;
     text-align: center;
     margin: 0;
-    font-size: 45px;
+    font-size: 60px;
     letter-spacing: 0.01em;
   }
 
   h3 {
     padding-top: 15px;
     text-align: center;
-    font-size: 24px;
+    font-size: 28px;
     letter-spacing: 0.01em;
     font-weight: 200;
+    font-weight: lighter;
   }
 
   .buttons {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 65px;
+    padding-bottom: 20px;
     .button {
       display: inline-block;
-      font-size: 16px;
+      font-size: 20px;
+      font-weight: 300;
       background-color: #61dafb;
       color: #000000;
-      padding: 10px 25px;
+      padding: 15px 25px;
       white-space: nowrap;
     }
     a {
       padding: 15px;
+      font-size: 20px;
     }
+  }
+}
+
+.cards {
+  display: flex;
+}
+
+.card {
+  width: 30%;
+  padding-top: 90px;
+  padding-left: 20px;
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 100;
+    padding-bottom: 20px;
+  }
+
+  .card-text {
+    line-height: 1.7rem;
+    font-weight: 300 bolder;
+    letter-spacing: 0.02rem;
+    padding-bottom: 20px;
   }
 }
