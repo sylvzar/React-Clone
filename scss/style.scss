@@ -69,6 +69,7 @@ a:hover {
     padding: 5px 20px;
     .navlogo {
       display: flex;
+      width: 180px;
     }
 
     ul {
@@ -86,6 +87,11 @@ a:hover {
         border-radius: 5px;
         outline: none;
         padding-left: 30px;
+        background-image: url(/search.svg);
+        background-repeat: no-repeat;
+        background-size: 15px;
+        background-position-y: center;
+        background-position-x: 5px;
       }
 
       .search-input:focus {
@@ -145,6 +151,11 @@ a:hover {
       color: #000000;
       padding: 15px 25px;
       white-space: nowrap;
+      transition-duration: 0.25s;
+    }
+
+    .button:hover {
+      background-color: white;
     }
     a {
       padding: 15px;
@@ -155,16 +166,20 @@ a:hover {
 
 .cards {
   display: flex;
+  justify-content: space-between;
+  color: rgba(20, 20, 20, 0.9);
+  padding: 90px 0px 60px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
 }
 
 .card {
   width: 30%;
-  padding-top: 90px;
-  padding-left: 20px;
 
   .card-title {
-    font-size: 1.5rem;
+    font-size: 20px;
     font-weight: 100;
+    letter-spacing: 0;
     padding-bottom: 20px;
   }
 
@@ -173,5 +188,10 @@ a:hover {
     font-weight: 300 bolder;
     letter-spacing: 0.02rem;
     padding-bottom: 20px;
+    font-size: 17px;
   }
+}
+
+.whitespace {
+  height: 100px;
 }
