@@ -29,6 +29,16 @@ a:hover {
   }
 }
 
+.bg-div {
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  .bg-img {
+    font-size: 40rem;
+    color: rgba(255, 255, 255, 0.05);
+  }
+}
+
 .header {
   background-color: #20232a;
   color: white;
@@ -40,15 +50,6 @@ a:hover {
   position: sticky;
   top: 0;
 
-  .bg-div {
-    position: absolute;
-    top: 180px;
-    left: 50%;
-    .bg-img {
-      font-size: 40rem;
-      color: rgba(255, 255, 255, 0.05);
-    }
-  }
   .header-top {
     font-size: 24px;
   }
@@ -65,6 +66,7 @@ a:hover {
     line-height: 3rem;
     font-size: 17px;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
     padding: 5px 20px;
     .navlogo {
@@ -194,4 +196,21 @@ a:hover {
 
 .whitespace {
   height: 100px;
+}
+
+@media (min-width: 1200px) {
+  .mobile-popup {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container,
+  .header {
+    display: none;
+  }
+
+  .mobile-popup {
+    display: absolute;
+  }
 }
