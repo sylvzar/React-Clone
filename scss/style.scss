@@ -22,6 +22,7 @@ a:hover {
 
 .container {
   width: 90%;
+  max-width: 1500px;
   margin: 0 auto;
   justify-content: center;
   span {
@@ -31,8 +32,9 @@ a:hover {
 
 .bg-div {
   position: absolute;
-  top: 180px;
+  top: 40%;
   left: 50%;
+  z-index: 0;
   .bg-img {
     font-size: 40rem;
     color: rgba(255, 255, 255, 0.05);
@@ -71,15 +73,19 @@ a:hover {
     padding: 5px 20px;
     .navlogo {
       display: flex;
-      width: 180px;
+      max-width: 180px;
     }
 
     ul {
       display: flex;
       list-style: none;
 
+      .search {
+        width: auto;
+      }
       .search-input {
         height: 30px;
+        width: auto;
         background-color: transparent;
         color: #ffffff;
         font-size: 18px;
@@ -145,6 +151,7 @@ a:hover {
     align-items: center;
     padding-top: 65px;
     padding-bottom: 20px;
+    z-index: 10;
     .button {
       display: inline-block;
       font-size: 20px;
@@ -204,7 +211,7 @@ a:hover {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .container,
   .header {
     display: none;
